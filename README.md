@@ -8,7 +8,7 @@ Gift E-Farming is a sophisticated web application built with a **glassmorphic UI
 ## 📺 Project Demonstrations
 
 ### 🛒 User Experience & Product Gallery
-[INSERT_USER_VIDEO_HERE]
+[https://github.com/user-attachments/assets/9df86f18-aacb-4710-a99d-35ebeb755cff]
 *A walkthrough of the responsive shop interface, featuring high-quality product cards and a dynamic 13-item organic catalog.*
 
 ### 🔐 Administrative Management Portal
