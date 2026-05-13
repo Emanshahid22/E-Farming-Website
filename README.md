@@ -19,8 +19,9 @@ A modern full-stack organic marketplace connecting local farmers with consumers 
 
 ## 🖼️ Website Interface
 
+
 <p align="center">
-  <img src="YOUR_IMAGE_LINK_HERE" width="100%" alt="E-Farming Website Preview">
+  <img width="1893" height="982" alt="image" src="https://github.com/user-attachments/assets/dbc361bf-5b30-4a87-8e45-f7f1592fff14" />
 </p>
 
 ---
