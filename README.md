@@ -15,8 +15,6 @@ A modern full-stack organic marketplace connecting local farmers with consumers 
 
 ---
 
-# 📸 Preview
-
 ## 🖼️ Website Interface
 
 
@@ -26,11 +24,12 @@ A modern full-stack organic marketplace connecting local farmers with consumers 
 
 ---
 
-# 🎥 Project Demonstrations
+# Project Demonstrations
 
 ## 🛒 User Shopping Experience
 
-https://github.com/user-attachments/assets/VIDEO_LINK_1
+<img width="1899" height="985" alt="image" src="https://github.com/user-attachments/assets/6f626b63-893f-4ee3-b367-543a8577a57d" />
+
 
 ### Features Demonstrated
 - Responsive product grid
@@ -43,7 +42,8 @@ https://github.com/user-attachments/assets/VIDEO_LINK_1
 
 ## 🔐 Admin Dashboard
 
-https://github.com/user-attachments/assets/VIDEO_LINK_2
+<img width="1897" height="977" alt="image" src="https://github.com/user-attachments/assets/67a365c5-adeb-4e25-b3bf-4ce7a5c86d29" />
+
 
 ### Admin Features
 - Inventory management
@@ -66,6 +66,7 @@ https://github.com/user-attachments/assets/VIDEO_LINK_2
 - Optimized shopping interface
 
 ## 🔐 Admin Features
+<img width="1248" height="891" alt="image" src="https://github.com/user-attachments/assets/616086f0-0e38-4809-9b4f-30dcbbb97a58" />
 
 - Secure admin authentication
 - Inventory management system
@@ -170,9 +171,7 @@ The platform is optimized for:
 # 👨‍💻 Developer
 
 **Eman Shahid**  
-GIFT University, Gujranwala
-
-📧 Email: 221980016@gift.edu.pk
+📧 Email: emanshahid1976@gmail.com
 
 ---
 
