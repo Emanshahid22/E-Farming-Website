@@ -1,0 +1,142 @@
+/* --- MODERN ABOUT PAGE DESIGN --- */
+
+.about-page {
+    background-color: #fcfdfc; /* Very light organic green tint */
+    margin: 0;
+    color: #1e293b;
+}
+
+/* 1. Hero Banner with Image Overlay */
+.about-hero {
+    position: relative;
+    height: 450px;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('banner2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.about-hero h1 span {
+    color: #4ade80; /* Brighter, modern green */
+}
+
+/* 2. Overlapping Info Card */
+.about-main-card {
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    margin: -100px auto 80px; /* This creates the overlap effect */
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+}
+
+.about-flex {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image-side {
+    position: relative;
+}
+
+.about-image-side img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(0.95);
+}
+
+/* Decorative element behind image */
+.about-image-side::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    background: #4ade80;
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.about-text-side h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #0f172a;
+}
+
+.about-text-side p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* 3. Stats/Values Grid */
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    padding: 40px;
+    background: #f8fafc;
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.4s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.value-card:hover {
+    background: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    border-color: #4ade80;
+}
+
+.value-card i {
+    font-size: 2rem;
+    color: #22c55e;
+    margin-bottom: 20px;
+    background: #f0fdf4;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .about-flex { grid-template-columns: 1fr; }
+    .about-hero h1 { font-size: 2.8rem; }
+    .value-grid { grid-template-columns: 1fr; }
+    .about-main-card { margin: -50px 20px 50px; padding: 30px; }
+}

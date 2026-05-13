@@ -1,0 +1,118 @@
+:root {
+    --primary: #228afa;
+    --dark: #1e293b;
+    --light-bg: #f8fafc;
+    --border: #e2e8f0;
+    --text-muted: #64748b;
+}
+
+body {
+    background-color: var(--light-bg);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+}
+
+/* Header & Nav */
+.main-header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+.top-bar {
+    background: var(--dark);
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo { font-size: 22px; font-weight: 700; color: var(--primary); }
+.logo span { color: var(--dark); font-weight: 300; }
+
+.nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 14px; }
+.nav-links a.active { color: var(--primary); }
+.nav-links a.logout { color: #ef4444; }
+
+/* Content Layout */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.welcome-header { margin-bottom: 30px; }
+.welcome-header h1 { font-size: 28px; margin: 0; }
+.welcome-header p { color: var(--text-muted); }
+
+/* Data Cards */
+.data-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 20px;
+    background: #fdfdfd;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-header h2 { font-size: 18px; margin: 0; display: flex; align-items: center; gap: 10px; }
+.card-header i { color: var(--primary); }
+
+/* Table Reset */
+.table-responsive { overflow-x: auto; }
+
+table {
+    width: 100% !important; /* Force full width */
+    border-collapse: collapse;
+    background-color: white !important; /* Overwrite your old blue style */
+}
+
+table th {
+    background: #f8fafc !important;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+}
+
+table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--dark);
+    text-align: left !important;
+}
+
+.bold { font-weight: 700; }
+
+/* Status Badges */
+.badge {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.badge.green { background: #dcfce7; color: #166534; }
+
+.footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 13px; }

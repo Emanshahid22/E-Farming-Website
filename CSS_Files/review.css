@@ -1,0 +1,117 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the login container vertically and horizontally */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the review section */
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.review h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Style the review form */
+.review-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style input containers */
+.input-container {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input-container label {
+    font-size: 16px;
+}
+
+.input-container input[type="text"],
+.input-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* Style the submit button */
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Style the link button */
+a.button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Add hover effect to buttons */
+.button:hover, a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles (adjust as needed) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+}
