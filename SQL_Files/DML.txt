@@ -1,0 +1,84 @@
+
+INSERT INTO Admin (name, contact_no, address, email)
+VALUES ('Admin Name', '123-456-7890', '123 Admin St, Adminville', 'admin@example.com');
+
+
+INSERT INTO Farmer (name, contact_no, email, password, location)
+VALUES
+    ('John Doe', '123-456-7890', 'john@example.com', 'password1', 'Farmville'),
+    ('Jane Smith', '987-654-3210', 'jane@example.com', 'password2', 'Green Acres'),
+    ('Mike Johnson', '555-555-5555', 'mike@example.com', 'password3', 'Sunny Fields'),
+    ('Sarah Wilson', '333-333-3333', 'sarah@example.com', 'password4', 'Happy Farm'),
+    ('David Lee', '111-222-3333', 'david@example.com', 'password5', 'Maple Farm'),
+    ('Emily Brown', '444-444-4444', 'emily@example.com', 'password6', 'Meadow View'),
+    ('Chris Taylor', '777-777-7777', 'chris@example.com', 'password7', 'Golden Acres');
+
+
+
+INSERT INTO Customer (name, address, email, password, postal_code, contact_no)
+VALUES
+    ('Alice Johnson', '123 Main St, Cityville', 'alice@example.com', 'password1', '12345', '555-123-4567'),
+    ('Bob Smith', '456 Elm St, Townsville', 'bob@example.com', 'password2', '67890', '555-987-6543'),
+    ('Charlie Brown', '789 Oak St, Villageton', 'charlie@example.com', 'password3', '54321', '555-321-6789'),
+    ('David Lee', '101 Pine St, Hamletville', 'david@example.com', 'password4', '98765', '555-555-5555'),
+    ('Eva Wilson', '202 Maple St, Suburbia', 'eva@example.com', 'password5', '45678', '555-888-7777'),
+    ('Frank Adams', '303 Birch St, Countryside', 'frank@example.com', 'password6', '23456', '555-444-3333'),
+    ('Grace Taylor', '404 Cedar St, Outskirts', 'grace@example.com', 'password7', '78901', '555-666-9999');
+
+
+
+INSERT INTO Farm_Product (name, description, price, quantity_in_stock, farmer_id)
+VALUES
+    ('Carrots', 'Fresh and organic carrots', 2.99, 100, 1),
+    ('Apples', 'Crisp and juicy apples', 1.49, 200, 2),
+    ('Tomatoes', 'Ripe red tomatoes', 3.49, 150, 3),
+    ('Eggs', 'Farm-fresh eggs', 2.29, 300, 4),
+    ('Honey', 'Pure honey from our farm', 5.99, 50, 1),
+    ('Potatoes', 'Golden potatoes', 2.49, 120, 5),
+    ('Chicken', 'Free-range chicken', 7.99, 50, 6);
+
+
+
+INSERT INTO `Order` (order_id,order_date, delivery_address, order_status, total_amount, customer_id)
+VALUES
+    (1,'2023-09-10', '123 Main St, Cityville', 'Processing', 50.00, 1),
+    (2,'2023-09-11', '456 Elm St, Townsville', 'Shipped', 75.00, 2),
+    (3,'2023-09-12', '789 Oak St, Villageton', 'Delivered', 30.00, 3),
+    (4,'2023-09-13', '101 Pine St, Hamletville', 'Processing', 40.00, 4),
+    (5,'2023-09-14', '202 Maple St, Suburbia', 'Shipped', 60.00, 5),
+    (6,'2023-09-15', '303 Birch St, Countryside', 'Processing', 25.00, 6),
+    (7,'2023-09-16', '404 Cedar St, Outskirts', 'Delivered', 55.00, 7);
+
+
+INSERT INTO Payment (order_id, payment_amount, payment_method, payment_status)
+VALUES
+    (1, 50.00, 'Credit Card', 'Paid'),
+    (2, 75.00, 'PayPal', 'Paid'),
+    (3, 30.00, 'Credit Card', 'Paid'),
+    (4, 40.00, 'PayPal', 'Paid'),
+    (5, 60.00, 'Credit Card', 'Paid'),
+    (6, 25.00, 'PayPal', 'Paid'),
+    (7, 55.00, 'Credit Card', 'Paid');
+
+
+INSERT INTO Review (order_id, rating, comment)
+VALUES
+    (1, 5, 'Excellent service and fast delivery!'),
+    (2, 4, 'Good product quality, but delivery was a bit late.'),
+    (3, 5, 'The farm products were fresh and delicious!'),
+    (4, 4, 'Easy ordering process and good communication.'),
+    (5, 5, 'I love the honey from this farm!'),
+    (6, 3, 'Product quality was okay, but it took some time to arrive.'),
+    (7, 5, 'Great experience overall. Will order again!');
+
+
+INSERT INTO ProductOrder (product_id, order_id, quantity)
+VALUES
+    (1, 1, 5),
+    (2, 2, 3),
+    (3, 3, 2),
+    (4, 4, 1),
+    (5, 5, 4),
+    (6, 6, 2),
+    (7, 7, 3);
+

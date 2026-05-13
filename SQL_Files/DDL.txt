@@ -1,0 +1,74 @@
+CREATE TABLE Admin (
+    admin_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    contact_no VARCHAR(15),
+    address TEXT,
+    email VARCHAR(255)
+);
+
+CREATE TABLE Farmer (
+    farmer_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    contact_no VARCHAR(15) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    location VARCHAR(255)
+);
+
+CREATE TABLE Customer (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    address TEXT,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    postal_code VARCHAR(10),
+    contact_no VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE `Order` (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_date DATE NOT NULL,
+    delivery_address TEXT NOT NULL,
+    order_status VARCHAR(50) NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    admin_id INT,
+    customer_id INT,
+    FOREIGN KEY (admin_id) REFERENCES Admin(admin_id),
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+);
+
+CREATE TABLE Payment (
+    payment_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT,
+    payment_amount DECIMAL(10, 2) NOT NULL,
+    payment_method VARCHAR(50) NOT NULL,
+    payment_status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES `Order`(order_id)
+);
+
+CREATE TABLE Review (
+    review_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT,
+    rating INT,
+    comment TEXT,
+    FOREIGN KEY (order_id) REFERENCES `Order`(order_id)
+);
+
+CREATE TABLE Farm_Product (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    quantity_in_stock INT NOT NULL,
+    farmer_id INT,
+    FOREIGN KEY (farmer_id) REFERENCES Farmer(farmer_id)
+);
+
+CREATE TABLE ProductOrder (
+    product_id INT,
+    order_id INT,
+    quantity INT NOT NULL,
+    PRIMARY KEY (product_id, order_id),
+    FOREIGN KEY (product_id) REFERENCES Farm_Product(product_id),
+    FOREIGN KEY (order_id) REFERENCES `Order`(order_id) 
+);
